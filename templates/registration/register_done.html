@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="register_form">
+    <div>
+        <h1 class="register_message">회원가입 성공</h1>
+    </div>
+    <div>
+        <a href="{% url 'index' %}" class="register_message register_link">메인페이지 이동</a>
+    </div>
+</div>
+{% endblock content %}

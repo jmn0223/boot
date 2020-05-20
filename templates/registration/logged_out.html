@@ -1,0 +1,9 @@
+
+{% extends 'base.html'%}
+{% block content %}
+<div class="register_form" id="logout">
+    <p>sign out</p>
+    <p><a href="{% url 'index' %}" class="logout_a">GO INDEX</a></p>
+    <p><a href="{% url 'login' %}" class="logout_a">SIGN IN AGAIN</a></p>
+</div>
+{% endblock content %}

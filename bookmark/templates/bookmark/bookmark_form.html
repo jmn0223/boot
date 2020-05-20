@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align:center;
+        }
+        div{
+            width:500px;
+            height:50px;
+            text-align:center;
+            padding:auto;
+
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" action=".">{% csrf_token %}
+    <div>
+        {{ form.title.label_tag }}{{ form.title }}
+    </div>
+    <div>
+        {{ form.url.label_tag }}{{ form.url }}
+    </div>
+    <button type="submit">CREATE/UPDATE</button>
+
+</form>
+
+</body>
+</html>

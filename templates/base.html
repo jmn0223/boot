@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+        .auth_menu{
+            font-size: 1vw;
+            font-family: 'Oswald', sans-serif;
+        }
+        .nav_menu{
+            font-size: 2.5vw;
+            font-family: 'Shadows Into Light', cursive;
+        }
+        .nav_a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav_a:hover{
+            color: darkred;
+            text-decoration: underline;
+        }
+        .HR{
+            border: 3px double darkred;
+        }
+        .register_form{
+            width:410px; height:auto;
+            margin:auto; margin-top:200px;
+            border:1px solid darkred;
+            border-radius:5px; padding:20px;
+            font-family: 'Heebo'; font-weight: bolder;
+        }
+        .register_label, .register_input{display:inline-block;}
+        .register_label{width:200px;}
+        .register_input{width:200px;}
+        input{width:100%;}
+        .register_btn{
+            width:100%; height:50px;
+            background-color:orangered;
+            color:white; border-radius:5px;
+            font-family: 'Heebo'; font-weight: bolder;
+        }
+        .login{
+            width:300px;
+            text-align:center;
+            color:black;
+            margin:auto;
+            margin-top:200px;
+        }
+        .label{
+            border:1px solid red;
+        }
+        #logout{ text-align:center; text-decoration:none;  font-family: 'Shadows Into Light', cursive;
+        font-size:25px;}
+        .logout_a{ text-decoration:none; color:darkred; font-family: 'Shadows Into Light', cursive; }
+        .logout_a:hover{ text-decoration:underline; color:darkred;
+        font-family: 'Shadows Into Light', cursive; }
+
+        .register_link{
+            text-decoration:none; color:black;
+        }
+        .register_link:hover{
+            color:black;
+        }
+        .register_message{
+            font-size:20px;
+
+    </style>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="row text-right auth_menu">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">Hello, jmn0223</div>
+            <div class="col-md-3"><a class="nav_a" href="{% url 'login' %}">SIGN IN</a>&nbsp;
+                / &nbsp;<a class="nav_a" href="{% url 'register' %}">SIGN UP</a></div>
+        
+        </div>
+        <br>
+        
+        <div class="row text-center nav_menu">
+            <div class="col-md-3"><a href="{% url 'admin:index' %}" class="nav_a">ADMIN</a></div>
+            <div class="col-md-3"><a href="{% url 'about' %}" class="nav_a">DJANGO</a></div>
+            <div class="col-md-3"><a href="{% url 'bookmark_index' %}" class="nav_a">BOOKMARK</a></div>
+            <div class="col-md-3"><a href="{% url 'blog_index' %}" class="nav_a">BLOG</a></div>
+        </div>
+        <hr class="HR">
+    </div>
+
+    {% block content %}
+
+
+    {% endblock %}
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+
+</html>

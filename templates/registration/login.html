@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block content %}
+<!--<div class="login">
+    <form method="post" action=".">{% csrf_token %}
+        <div class="label">{{ form.username.label_tag }}</div>
+        <div class="label">{{ form.username }}</div>
+        <div class="label">{{ form.password.label_tag }}</div>
+        <div class="label">{{ form.password }}</div>
+        <button type="submit">SIGN IN</button>
+        <input type="hidden" value="{{ next }}">
+    </form>
+</div>-->
+<div class="register_form">
+
+    <form method="post" action=".">{% csrf_token %}
+        <div>
+            <div class="register_label">{{ form.username.label_tag }}</div>
+            <div class="register_input">{{ form.username }}</div>
+        </div>
+        <div>
+            <div class="register_label">{{ form.password.label_tag }}</div>
+            <div class="register_input">{{ form.password }}</div>
+        </div>
+
+        <br>
+        <button type="submit" class="register_btn">SIGN IN</button>
+    </form>
+
+</div>
+{% endblock content %}
